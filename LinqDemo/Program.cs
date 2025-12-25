@@ -21,3 +21,19 @@ Console.WriteLine("--------------------");
 Console.WriteLine($"Sum: {numbers.Sum()}");
 
 Console.WriteLine($"Average: {numbers.Average()}");
+
+Console.WriteLine("-------------------");
+
+// Min and Max methods
+Console.WriteLine($"Min: {numbers.Min()}");
+
+Console.WriteLine($"Max: {numbers.Max()}");
+
+Console.WriteLine("---------Transforming-----------");
+
+// Transform methods with LINQ (changing the values)
+
+Console.WriteLine("* squaredNumbers *");
+var squaredNumbers = numbers.Select(number => number * number).ToList();
+
+squaredNumbers.ForEach(x => Console.WriteLine(x));
