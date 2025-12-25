@@ -37,3 +37,35 @@ Console.WriteLine("* squaredNumbers *");
 var squaredNumbers = numbers.Select(number => number * number).ToList();
 
 squaredNumbers.ForEach(x => Console.WriteLine(x));
+
+Console.WriteLine("----------String Collections-----------");
+
+var names = new string[] { "Aaron", "Clara", "Maddie", "Peter", "Evan", "Julia", "Aly" };
+
+//Filtering using strings
+Console.WriteLine("* longerNames *");
+var longerNames = names.Where(x => x.Length > 4).ToArray();
+
+foreach (var name in longerNames)
+{
+    Console.WriteLine(name);
+}
+
+//Transforming with LINQ
+Console.WriteLine("* upperCaseNames * ");
+var upperCaseNames = names.Select(x => x.ToUpper().ToArray());
+
+foreach (var name in upperCaseNames)
+{
+    Console.WriteLine(name);
+}
+
+Console.WriteLine("---------Ordering Things----------");
+
+Console.WriteLine("* orderedNames *");
+var orderedNames = names.OrderBy(name => name.Length).ToArray();
+
+foreach (var name in orderedNames)
+{
+    Console.WriteLine(name);
+}
